@@ -5,7 +5,7 @@ $age = $_GET['age'];
 
     if(empty($name) || empty($email) || empty($age)){
         echo 'Attenzione stai lasciando i campi vuoti';
-    } elseif(strlen($name) > 3 && strpos($email, '@') !== false && strpos($email, ".") !== false && is_numeric($age)){
+    } elseif(strlen($name) > 3 && strpos($email, '@') && strpos($email, ".") && is_numeric($age)){
         echo "Accesso riuscito";
     } else {
         echo "Accesso negato";
