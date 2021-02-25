@@ -4,11 +4,11 @@ $email = $_GET['email'];
 $age = $_GET['age'];
 
     if(empty($name) || empty($email) || empty($age)){
-        echo 'Attenzione stai lasciando i campi vuoti';
+        $mex= 'Attenzione stai lasciando i campi vuoti';
     } elseif(strlen($name) > 3 && strpos($email, '@') && strpos($email, ".") && is_numeric($age)){
-        echo "Accesso riuscito";
+        $mex= "Accesso riuscito";
     } else {
-        echo "Accesso negato";
+        $mex= "Accesso negato";
     }
 ?>
 
@@ -27,7 +27,24 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”.
     <title>PHP snack 1; PHP snack 2</title>
 </head>
 <body>
+    <p>
+        <strong>Nome:</strong> 
+        <?php echo $name; ?>
+    </p>
 
+    <p>
+        <strong>Et&agrave;:</strong>  
+        <?php echo $age; ?>
+    </p>
+
+    <p>
+    <strong>E-mail:</strong>  
+        <?php echo $email; ?>
+    </p>
+
+    <h2>
+        <?php echo $mex ?>
+    </h2>
 
 </body>
 </html>
