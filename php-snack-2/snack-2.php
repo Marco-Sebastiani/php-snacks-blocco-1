@@ -3,7 +3,13 @@ $name = $_GET['name'];
 $email = $_GET['email'];
 $age = $_GET['age'];
 
-
+    if(empty($name) || empty($email) || empty($age)){
+        echo 'Attenzione stai lasciando i campi vuoti';
+    } elseif(strlen($name) > 3 && strpos($email, '@') !== false && strpos($email, ".") !== false && is_numeric($age)){
+        echo "Accesso riuscito";
+    } else {
+        echo "Accesso negato";
+    }
 ?>
 
 <!-- PHP Snack 2:
