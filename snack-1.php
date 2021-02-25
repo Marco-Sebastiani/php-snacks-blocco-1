@@ -59,20 +59,25 @@ $matches = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PHP snack 1; PHP snack 2</title>
 </head>
 <body>
-    <h1>25-02-21 SECONDA GIORNATA</h1>
+    <div class="box-matches">
+    
+        <h1>25-02-21 SECONDA GIORNATA</h1>
 
-    <p>
-        <?php for ($i = 0; $i < count($matches); $i++){
+        <p>
+            <?php for ($i = 0; $i < count($matches); $i++){
 
-            echo '<strong>SQUADRE:</strong> ' .$matches[$i]['homeTeam'].' - '.$matches[$i]['visitingTeam'].' | <strong>PUNTI:</strong> '.$matches[$i]['pointsHomeTeam'].' - '.$matches[$i]['pointsVT'] .'<br>';
+                echo '<strong>SQUADRE:</strong> ' .$matches[$i]['homeTeam'].' <strong> VS </strong> '.$matches[$i]['visitingTeam'].' | <strong>PUNTI:</strong> '.$matches[$i]['pointsHomeTeam'].' - '.$matches[$i]['pointsVT'] .'<br>';
 
 
-        }
+            }
 
-        ?></p>
+            ?>
+        </p>
+    </div>
 
 <!-- count ( Countable | array $value , int $mode=COUNT_NORMAL ): int
 Conta tutti gli elementi in un array o qualcosa in un oggetto. -->
